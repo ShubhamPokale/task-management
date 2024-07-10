@@ -27,4 +27,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
 
-The project is deployed here[See the project live ](https://task-management-fgto3n32r-shubham-pokales-projects.vercel.app)
+[See the project live ](https://task-management-fgto3n32r-shubham-pokales-projects.vercel.app)
