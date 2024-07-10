@@ -1,0 +1,40 @@
+<app-header />
+
+<main>
+  <ul id="users">
+    <!-- dynamically render list -->
+     <!-- angular 17 -->
+    @for(user of users; track user.id){
+    <li>
+      <app-user [selected]="user.id == selectedUserId" [user]="user" (select)="onSelectUser($event)" />
+    </li>
+
+    }
+
+    <!-- <li><app-user [user]="users[1]"
+      (select)="onSelectUser($event)"
+      /></li>
+    <li><app-user [user]="users[2]"
+      (select)="onSelectUser($event)"
+      /></li>
+    <li><app-user [user]="users[3]"
+      (select)="onSelectUser($event)"
+      /></li> -->
+  </ul>
+
+  <!-- Tasks of the selected user -->
+  <!-- <h2>Tasks of user</h2> -->
+  <!-- DUMMY_USERS.find(user => user.id === selectedUser(UserId)!) -->
+
+  <!-- app-task -->
+  <!-- <app-tasks [name]="selectedUser.name"></app-tasks> -->
+<!-- Conditional rendering -->
+ <!-- render the app task only if an user is selected -->
+  <!-- added in angular 17 -->
+ @if(selectedUser) {
+  <app-tasks  [userId]="selectedUser.id"  [name]="selectedUser.name"></app-tasks>} @else {
+
+    <p id="fallback-text">Select a user to see tasks </p>
+
+  }
+</main>
